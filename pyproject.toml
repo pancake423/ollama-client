@@ -1,0 +1,9 @@
+[project]
+name = "ollama-client"
+version = "0.1.0"
+description = "A simple terminal-based client for ollama on ubuntu linux (or similar)."
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "requests>=2.32.5",
+]
