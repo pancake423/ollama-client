@@ -1,9 +1,9 @@
 [project]
 name = "ollama-client"
 version = "0.1.0"
-description = "A simple terminal-based client for ollama on ubuntu linux (or similar)."
+description = "A simple web client for using local ollama models."
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
-    "requests>=2.32.5",
+    "flask>=3.1.2",
 ]
