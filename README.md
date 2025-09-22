@@ -3,8 +3,14 @@
 ## Dependencies
 
 ### uv
+python dependency and virtual environment manager.
+
+https://docs.astral.sh/uv/getting-started/installation/
 
 ### ollama
+open source LLMs.
+
+see https://ollama.com/download
 
 ## Initialization
 
