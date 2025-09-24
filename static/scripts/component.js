@@ -8,7 +8,7 @@ projects this hacky solution is more fun!
 export default class Component {
   constructor({
     nodeType: type = "div",
-    parent = document.body,
+    parent = null,
     classes = [],
     contents = "",
   }) {
@@ -18,8 +18,12 @@ export default class Component {
       this.domElement.classList.add(c);
     }
     this.domElement.innerHTML = contents;
-    // auto detect if parent is a Component instead of a vanilla HMTL element
+    // no parent; don't attach to DOM here
+    if (parent === null) {
+      return;
+    }
     if (parent instanceof Component) {
+      // auto detect if parent is a Component instead of a vanilla HMTL element
       parent.domElement.appendChild(this.domElement);
     } else {
       parent.appendChild(this.domElement);
@@ -29,5 +33,13 @@ export default class Component {
   listen({ event, handler, global = false }) {
     const target = global ? window : this.domElement;
     target.addEventListener(event, handler);
+  }
+
+  addChild(component) {
+    if (component instanceof Component) {
+      this.domElement.appendChild(component.domElement);
+    } else {
+      this.domElement.appendChild(component);
+    }
   }
 }

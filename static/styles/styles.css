@@ -7,3 +7,33 @@ body {
     height: 100vh;
     background-color: slategray;
 }
+
+.menu {
+    position: absolute;
+    width: 20vw;
+    height: 100vh;
+    background-color: darkslategray;
+}
+
+.menu-items-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100cqw;
+    height: 80cqh;
+}
+.menu-controls-container {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100cqw;
+    height: 20cqh;
+}
+
+.left {
+    left: 0;
+}
+
+.right {
+    right: 0;
+}
